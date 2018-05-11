@@ -1,0 +1,29 @@
+#Generates a triangle made out of stars
+#CNA336 , 5/10/2018
+#Ian Hardgrave , theholyboots@gmail.com
+
+
+S = int(input("Please provide an odd number: ")) #input from the user
+
+max_star = (S // 2) + 1                          #equation for getting the "middle number"
+
+lowest_star = 1                                  #lowest possible star
+
+i = -1                                           # base number for counting up
+
+for i in range(max_star):   #loop for max possible star height
+    if i == max_star:       #triggers to stop when reached max height
+        top = i * "*"
+        print(top)
+    if i != max_star:       #triggers another loop to go higher
+        i = i + 1
+        up = i * "*"
+        print(up)
+
+
+for i in (reversed(range(max_star))):   #loops back down to 0 with the command: reversed
+    if i != max_star:       #triggers another loop to go lower
+        i = i + 1
+        up = i * "*"
+        print(up)
+
