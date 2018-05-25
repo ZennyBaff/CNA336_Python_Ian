@@ -1,0 +1,55 @@
+from random import *
+x = randint(1, 10)  # Random number generation for X value
+int(x)
+
+y = int(input("What is the correct number between 1 and 10?"))  # guessed number
+int(y)
+
+def answer_check(y, x):
+
+    if (y < x):
+        return 'incorrect and too low'
+    if (y > x):
+        return 'incorrect and too high'
+    if (y == x):
+        return 'correct'
+
+print ("The result is " + str(answer_check(y, x)) + "!")
+
+if(answer_check(y, x) == 'correct'):
+    print("You Win!")
+if(answer_check(y, x) == 'incorrect and too low' or answer_check(y, x) == 'incorrect and too high'):
+    z = int(input("What is your second guess?"))
+
+    def answer_check(z, x):
+
+        if (z < x):
+            return 'incorrect and too low'
+        if (z > x):
+            return 'incorrect and too high'
+        if (z == x):
+            return 'correct'
+
+    print ("The result is " + str(answer_check(z, x)) + "!")
+
+    if(answer_check(z, x) == 'correct'):
+        print("You Win!")
+
+    if(answer_check(z, x) == 'incorrect and too low' or answer_check(z, x) == 'incorrect and too high'):
+        a = int(input("What is your third guess?"))
+
+        def answer_check(a, x):
+
+            if (a < x):
+                return 'incorrect and too low'
+            if (a > x):
+                return 'incorrect and too high'
+            if (a == x):
+                return 'correct'
+
+        print ("The result is " + str(answer_check(a, x)) + "!")
+
+        if(answer_check(a, x) == 'correct'):
+            print("You Win!")
+        if (answer_check(a, x) == 'incorrect' or answer_check(a, x) == 'incorrect and too high'):
+            print("You are out of lives. The correct number was " + str(x) + ".")

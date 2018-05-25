@@ -1,0 +1,11 @@
+#The users first and last names are made into a username that has the first initial and first seven charaters of the last name
+#CNA336, Spring 2018
+#Ian Hadrgrave, theholyboots@gmail.com, Jason Dalichau
+
+
+f = input('Please enter your first name: ')
+l = input('Please enter your last name: ')
+
+f = f.lower()
+l = l.lower()
+print(f[:1] + l[:7])

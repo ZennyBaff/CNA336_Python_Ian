@@ -1,0 +1,13 @@
+#This program calculates interest in years
+#CNA336 , 5/10/2018
+#Ian Hardgrave , theholyboots@gmail.com
+
+P = float(input("Please enter the initial amount before the interest (In decimal): "))      #input for total amount of money
+
+R = float(input("Please enter a Percent of the interest (In decimal): "))                   #input for the percent of interest on
+
+T = float(input("Please enter in the amount of time where the interest is being calculated (Years) (In decimal): "))    #input for how many years the interest is set (in decimal numbers only)
+
+Answer = str(P * (1 + R / 100) ** T)        #equation for calculating interest
+
+print ("The Compound interest is: " + Answer)
